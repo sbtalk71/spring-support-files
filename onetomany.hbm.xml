@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hs.hibernate">
+	<class name="Emp" table="EMP">
+		<id name="empNo" column="EMPNO">
+			<generator class="assigned" />
+		</id>
+		<property name="empName" column="NAME" />
+		<property name="salary" column="SALARY" />
+		<many-to-one name="dept" column="deptNo"/>
+	</class>
+
+	<class name="Dept" table="DEPT">
+		<id name="deptNo" column="DNO">
+			<generator class="assigned" />
+		</id>
+		<property name="deptName" column="DNAME" />
+		<property name="manager" column="MANAGER" />
+		
+		<set name="emps" table="EMP" cascade="all" lazy="false" inverse="true">
+		<key column="deptNo"/>
+		<one-to-many class="Emp"/>
+		</set>
+
+	</class>
+</hibernate-mapping>
