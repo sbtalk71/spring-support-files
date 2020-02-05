@@ -1,0 +1,3 @@
+Please write the answers in text format and export to pdf.
+Mention your name and company Id in the answer sheet header and file name as <your_id>.pdf
+upload the pdf to the share
