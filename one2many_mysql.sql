@@ -1,5 +1,3 @@
-#drop table MYEMP cascade constraints;
-#drop Table MYDEPT cascade constraints;
 
 create table MYDEPT (DNO integer not null,
 DNAME varchar(15),
