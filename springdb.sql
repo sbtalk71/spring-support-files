@@ -1,6 +1,18 @@
 CREATE DATABASE springdb;
 use springdb;
 
+CREATE TABLE `users` (
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `enabled` tinyint(1) NOT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+LOCK TABLES `users` WRITE;
+
+INSERT INTO `users` VALUES ('arun','welcome1',0),('pavan','welcome1',1),('shantanu','welcome1',1);
+
+UNLOCK TABLES;
 CREATE TABLE `authorities` (
   `username` varchar(50) NOT NULL,
   `authority` varchar(50) NOT NULL,
@@ -28,18 +40,4 @@ INSERT INTO `emp` VALUES (100,'Amitabh','Mumbai',20000),(101,'Shekhar','Hyderaba
 
 UNLOCK TABLES;
 
-
-
-CREATE TABLE `users` (
-  `username` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `enabled` tinyint(1) NOT NULL,
-  PRIMARY KEY (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-LOCK TABLES `users` WRITE;
-
-INSERT INTO `users` VALUES ('arun','welcome1',0),('pavan','welcome1',1),('shantanu','welcome1',1);
-
-UNLOCK TABLES;
 
