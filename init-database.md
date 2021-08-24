@@ -20,6 +20,7 @@ INSERT INTO `emp` VALUES (100,'Amitabh','Mumbai',20000),(101,'Shekhar','Hyderaba
 UNLOCK TABLES;
 
 ##Datasource in Spring boot 
+
 spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
 spring.datasource.url=jdbc:mariadb://localhost:3306/springdb
 spring.datasource.username=root
