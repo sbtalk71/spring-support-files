@@ -1,5 +1,6 @@
+##Database Initialization
 1. log into your database client using the given username and password
-3. copy the following sql snippet and paste it to the mysql prompt:
+2. copy the following sql snippet and paste it to the mysql prompt:
 
 CREATE DATABASE springdb;
 use springdb;
@@ -18,3 +19,11 @@ INSERT INTO `emp` VALUES (100,'Amitabh','Mumbai',20000),(101,'Shekhar','Hyderaba
 
 UNLOCK TABLES;
 
+##Datasource in Spring boot 
+spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
+spring.datasource.url=jdbc:mariadb://localhost:3306/springdb
+spring.datasource.username=root
+spring.datasource.password=root
+spring.datasource.name=myds
+
+spring.jpa.show-sql=true
