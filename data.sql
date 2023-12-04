@@ -1,3 +1,5 @@
+create table emp(empno int primary key, name varchar(20), address varchar(20), salary double);
+
 insert into emp(empno,name,address,salary) values (101,'Aman','Kanpur',56000);
 insert into emp(empno,name,address,salary) values(102,'Jagan','Hyderabad',66000);
 insert into emp(empno,name,address,salary) values(102,'Raja','bangalore',58000);
